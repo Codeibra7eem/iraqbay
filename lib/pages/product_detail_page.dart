@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'common_app_bar.dart';
 class ProductDetailPage extends StatelessWidget {
   const ProductDetailPage({super.key});
 
@@ -17,9 +17,7 @@ class ProductDetailPage extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(productName),
-      ),
+      appBar: CommonAppBar(categories: []),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'common_app_bar.dart';
 class RegisterPage extends StatelessWidget {
   RegisterPage({super.key});
 
@@ -9,10 +9,7 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Register'),
-        centerTitle: true,
-      ),
+      appBar: CommonAppBar(categories: []),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(24.0),
         child: Form(

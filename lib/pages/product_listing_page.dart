@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'common_app_bar.dart';
 class ProductListingPage extends StatelessWidget {
   const ProductListingPage({super.key});
 
@@ -50,23 +50,7 @@ class ProductListingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Product Listing Page'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.filter_list),
-            onPressed: () {
-              // TODO: Implement filter functionality
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.sort),
-            onPressed: () {
-              // TODO: Implement sort functionality
-            },
-          ),
-        ],
-      ),
+      appBar: CommonAppBar(categories: []),
       body: Column(
         children: [
           // Placeholder for filter/sort options UI

@@ -14,7 +14,7 @@ import 'pages/help_page.dart';
 import 'pages/store_page.dart';
 import 'pages/admin_panel_page.dart';
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
 }
 
@@ -29,7 +29,9 @@ class MyApp extends StatelessWidget {
       title: 'IQbay',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(204,0,0,1)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromRGBO(204, 0, 0, 1),
+        ),
         useMaterial3: true,
         textTheme: GoogleFonts.latoTextTheme(
           // Using Lato font
@@ -67,4 +69,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 

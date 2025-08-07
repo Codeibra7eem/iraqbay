@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'common_app_bar.dart';
 class OrderHistoryPage extends StatelessWidget {
   const OrderHistoryPage({super.key});
 
@@ -25,9 +25,7 @@ class OrderHistoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Order History'),
-      ),
+      appBar: CommonAppBar(categories: []),
       body: ListView.builder(
         itemCount: pastOrders.length,
         itemBuilder: (context, index) {

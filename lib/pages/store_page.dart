@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'common_app_bar.dart';
 class StorePage extends StatelessWidget {
   const StorePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Seller Store Name'), // Placeholder store name
-      ),
+      appBar: CommonAppBar(categories: []),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

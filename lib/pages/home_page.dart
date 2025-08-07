@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'common_app_bar.dart';
 
 class HomePage extends StatelessWidget {
   final List<Map<String, String>> categories = [
@@ -31,49 +32,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // TODO: Implement search functionality
-            },
-          ),
-        ],
-        bottom: PreferredSize(
-          preferredSize: Size.fromHeight(50.0), // Adjust height as needed
-          child: Container(
-            color: Colors.white, // Or a color that fits your theme
-            height: 50.0,
-            child: Center(
-              // Added Center widget
-              child: ListView.builder(
-                shrinkWrap:
-                    true, // Add shrinkWrap to prevent unnecessary scrolling
-                scrollDirection: Axis.horizontal,
-                itemCount: categories
-                    .length, // Assuming 'categories' list is available
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Center(
-                      child: Text(
-                        categories[index][
-                            'name']!, // Assuming category name is in 'name' key
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color:
-                              Colors.black, // Or a color that fits your theme
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ),
-        ),
-      ),
+      appBar: CommonAppBar(categories: []),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

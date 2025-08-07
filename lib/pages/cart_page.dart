@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'common_app_bar.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -6,9 +7,7 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Shopping Cart'),
-      ),
+      appBar: CommonAppBar(categories: []),
       body: Column(
         children: [
           Expanded(
