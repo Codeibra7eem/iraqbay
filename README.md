@@ -1,4 +1,4 @@
-# iqbay
+# IQbay
 
 A new Flutter project.
 
