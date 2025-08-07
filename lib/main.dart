@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       title: 'IQbay',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(204,0,0,1)),
         useMaterial3: true,
         textTheme: GoogleFonts.latoTextTheme(
           // Using Lato font
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blueAccent,
+            backgroundColor: Color(0xFF8B0000),
             foregroundColor: Colors.white,
           ),
         ),
