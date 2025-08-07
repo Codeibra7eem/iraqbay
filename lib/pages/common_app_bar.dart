@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
+
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Map<String, String>> categories;
 
   const CommonAppBar({
-    Key? key,
+    super.key,
     required this.categories,
-  }) : super(key: key);
+  });
 
   @override
   Size get preferredSize => const Size.fromHeight(
@@ -34,7 +35,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
             ); // Navigate back to home and remove all previous routes
           },
           child: Image.asset(
-            'pictures/Iraqbay.png', // Replace with your actual logo image path
+            'assets/icon.svg', // Replace with your actual logo image path
             fit: BoxFit.contain,
           ),
         ),
